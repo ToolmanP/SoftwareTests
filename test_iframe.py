@@ -24,6 +24,6 @@ def test_iframe(playwright: Playwright):
 欢迎有建设性的批评，但是请对事不对人。"""
     ).fill(f"检测到iframe内容标题为: {iframe_title}")
     page.get_by_role("button", name="发送消息").first.click()
-    locator = page.get_by_text(f"检测到iframe内容标题为: {iframe_title}")
+    locator = page.get_by_text(f"检测到iframe内容标题为: 【官方 MV】Never Gonna Give You Up - Rick Astley")
     expect(locator.first).to_be_visible()
 

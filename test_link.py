@@ -27,5 +27,5 @@ def test_link(playwright: Playwright):
 欢迎有建设性的批评，但是请对事不对人。"""
     ).fill(f"检测到新页面标题为: {new_page_title}")
     page.get_by_role("button", name="发送消息").first.click()
-    locator = page.get_by_text(f"检测到新页面标题为: {new_page_title}")
+    locator = page.get_by_text(f"检测到新页面标题为: 上海交通大学中文主页门户网站")
     expect(locator.first).to_be_visible()
